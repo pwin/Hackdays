@@ -30,8 +30,8 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
             <!--display options-->
             <!--facets-->
             <!--list view-->
+            <!--Search-->            
             <!--cloud view-->
-            <!--Search-->
         </body>
     </html>
 ```

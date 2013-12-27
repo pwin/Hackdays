@@ -7,8 +7,9 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
 ####Ingredients:
 
 * Data in Exhibit JSON format:  [http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json](http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json)
-
 * Exhibit JS library: [http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=true](http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=true)
+* A text editor (e.g. Notepad) or a specialised code editor (e.g. Sublime Text, jEdit, Textmate, etc)
+* A modern web browser (Chrome, Internet Explorer >= v9, Firefox, etc)
 
 
 #####Step 1: 

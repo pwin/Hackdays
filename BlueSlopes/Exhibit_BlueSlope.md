@@ -45,3 +45,20 @@ and then, using nested tags, it provides some information about the RSS file:
     </channel>
     </rss>
 ```
+
+so the real data about each item is in the following pattern:
+
+```xml
+    <item>
+        <title>Wintry weather update</title>
+        <link>http://scottishgovernment.presscentre.com/News/Wintry-weather-update-7e9.aspx</link>
+        <description>&lt;p&gt;Scottish Government Resilience committee monitors impact of storm.&lt;/p&gt;</description>
+        <guid>http://scottishgovernment.presscentre.com/News/Wintry-weather-update-7e9.aspx</guid>
+        <pubDate>Fri, 27 Dec 2013 12:49:00 GMT</pubDate>
+        <glidetechnologies:author>Catherine Brown</glidetechnologies:author>
+        <glidetechnologies:client>ScottishGovernment</glidetechnologies:client>
+        <glidetechnologies:processDate>Fri, 27 Dec 2013 12:49:00 GMT</glidetechnologies:processDate>
+        <glidetechnologies:releaseId>2025</glidetechnologies:releaseId>
+    </item>
+
+```

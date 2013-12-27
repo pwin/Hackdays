@@ -36,7 +36,7 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
     </html>
 ```
 
-* check that this works by opening it up in your web browser.  If it looks OK then add the Exhibit JS library using the following approach:
+* check that this works by opening it up in your web browser.  If it looks OK then add the Exhibit JS library just below the placemarker in your shell template using the following approach:
 
 
 ```html

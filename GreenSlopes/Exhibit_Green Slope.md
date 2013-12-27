@@ -58,7 +58,7 @@ and reload the page.  Look at the message bar of the web page and ensure that th
 
 and reload the page.  During the reload you should now see a small dialogue pane that describes the progress of the data loading phase.
 
-* Look at the JSON data - it is made of a repeat of the following data structure:
+* Look at the JSON data (open the JSON link in your browser and then, using right-click and view source, examine the raw JSON code) - it is made of a repeat of the following data structure:
 
 ```json
 

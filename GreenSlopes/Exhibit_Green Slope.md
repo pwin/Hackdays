@@ -8,7 +8,7 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
 
 * Data in Exhibit JSON format:  [http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json](http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json)
 
-* Exhibit JS library: [http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=false](http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=false)
+* Exhibit JS library: [http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=false](http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=true)
 
 
 #####Step 1: 

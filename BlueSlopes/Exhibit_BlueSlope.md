@@ -62,3 +62,49 @@ so the real data about each item is in the following pattern:
     </item>
 
 ```
+
+The XML elements with the 'glidetechnologies:' namespace are not generic RSS but are specific to this Scottish Government application.
+
+###Converting the RSS XML to Exhibit JSON
+Exhibit JSON has two mandatory data fields: 'id' and 'label'.  When converting this RSS data to Exhibit format we need to make sure that we include something for these 2 data elements.  We can use all the core RSS fields in our Exhibit.
+
+We can also use a Google API to convert the XML form of the feed into JSON
+
+This returns JSON of the form:
+
+```json
+    {
+        "responseData": {
+            "feed": {
+                "author": "",
+                "description": "All news topics - all areas Live",
+                "entries": [
+                    {
+                        "author": "",
+                        "categories": [],
+                        "content": "<p>Scottish Government Resilience committee monitors impact of storm.</p>",
+                        "contentSnippet": "Scottish Government Resilience committee monitors impact of storm.",
+                        "link": "http://scottishgovernment.presscentre.com:80/News/Wintry-weather-update-7e9.aspx",
+                        "publishedDate": "Fri, 27 Dec 2013 04:49:00 -0800",
+                        "title": "Wintry weather update"
+                    },
+                    {
+                        "author": "",
+                        "categories": [],
+                        "content": "<p><b>Consultation seeks public view on measures to tackle irresponsible dog ownership</b></p>",
+                        "contentSnippet": "Consultation seeks public view on measures to tackle irresponsible dog ownership",
+                        "link": "http://scottishgovernment.presscentre.com:80/News/Making-dog-owners-accountable-7de.aspx",
+                        "publishedDate": "Fri, 27 Dec 2013 01:46:00 -0800",
+                        "title": "Making dog owners accountable"
+                    },
+                    {
+                        "author": "",
+                        "categories": [],
+                        "content": "<p><strong>Housing and Welfare Minister has requested a meeting with the UK Government.</strong></p>",
+                        "contentSnippet": "Housing and Welfare Minister has requested a meeting with the UK Government.",
+                        "link": "http://scottishgovernment.presscentre.com:80/News/Bedroom-tax-costing-more-than-saving-7c2.aspx",
+                        "publishedDate": "Thu, 26 Dec 2013 16:01:00 -0800",
+                        "title": "Bedroom tax \u2018costing more than saving\u2019"
+                    },
+
+```

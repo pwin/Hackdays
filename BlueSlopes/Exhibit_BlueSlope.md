@@ -111,14 +111,14 @@ This returns JSON of the form:
 
 so we need extract the records, add the 'id' and 'label' fields, and wrap with an outer 'items' key with each 'item' record being a member of a JSON list (i.e. within square brackets).
 
-The following code snippet does this:
+The following code snippet [SNIPPET 1] does this:
 
 ```javascript
     $.ajax({ url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=" + maxCount + "&output=json&q=" + encodeURIComponent(feedUrl) + "&hl=en&callback=?", 
             dataType: "json", 
-        success: function (t) {
-            myJSON = t;
-            console.log(JSON.stringify(myJSON));
+        success: function (myJSON) {
+            if(debug) {console.log(JSON.stringify(myJSON));};
+
             var rel_Data = t.responseData.feed.entries.map(function(item) { 
             return {
             "id":  uuid(),
@@ -127,18 +127,26 @@ The following code snippet does this:
             "link" : item.link, 
             "content" : item.contentSnippet,
             "publicationDate" : item.publicationDate
-           
+
         }; 
     });
 
-          if(debug){alert(JSON.stringify(t.responseData.feed));};
+          if(debug){alert(JSON.stringify(myJSON.responseData.feed));};
           if(debug){alert(JSON.stringify({"items":rel_Data}));};
 
         },
         error: function(xhr, status, e) {
             alert('err')
-            alert(t)
           console.info(xhr, status, e);
         }
       });
+```
+
+the uuid() function is used to provide an 'id'
+
+```javascript
+    function uuid(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {var r = Math.random()*16|0,v=c=='x'?r:r&0x3|0x8;return v.toString(16);});
+    }
+
 ```

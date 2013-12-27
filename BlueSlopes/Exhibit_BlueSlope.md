@@ -108,3 +108,37 @@ This returns JSON of the form:
                     },
 
 ```
+
+so we need extract the records, add the 'id' and 'label' fields, and wrap with an outer 'items' key with each 'item' record being a member of a JSON list (i.e. within square brackets).
+
+The following code snippet does this:
+
+```javascript
+    $.ajax({ url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=" + maxCount + "&output=json&q=" + encodeURIComponent(feedUrl) + "&hl=en&callback=?", 
+            dataType: "json", 
+        success: function (t) {
+            myJSON = t;
+            console.log(JSON.stringify(myJSON));
+            var rel_Data = t.responseData.feed.entries.map(function(item) { 
+            return {
+            "id":  uuid(),
+            "label" : item.title,
+            "title": item.title,
+            "link" : item.link, 
+            "content" : item.contentSnippet,
+            "publicationDate" : item.publicationDate
+           
+        }; 
+    });
+
+          if(debug){alert(JSON.stringify(t.responseData.feed));};
+          if(debug){alert(JSON.stringify({"items":rel_Data}));};
+
+        },
+        error: function(xhr, status, e) {
+            alert('err')
+            alert(t)
+          console.info(xhr, status, e);
+        }
+      });
+```

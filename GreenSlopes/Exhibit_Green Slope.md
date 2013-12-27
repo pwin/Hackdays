@@ -15,6 +15,7 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
 * Create a text file called 'myGreenSlopeExample.html'
 * Add the following shell:
 ```html
+
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -33,19 +34,25 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
             <!--Search-->
         </body>
     </html>
+    
 ```
 * check that this works by opening it up in your web browser.  If it looks OK then add the Exhibit JS library using the following approach:
 ```html
+
     <script src="http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js?bundle=true"></script>
+    
 ```
 and reload the page.  Look at the message bar of the web page and ensure that the JS library is loading OK.
 * Then add a link to the JSON data file: 
 ```html
+
     <link href="http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json" type="application/json" rel="exhibit-data" />
+    
 ```
 and reload the page.  During the reload you should now see a small dialogue pane that describes the progress of the data loading phase.
 * Look at the JSON data - it is made of a repeat of the following data structure:
 ```json
+
     {
     "referring": "http://scotland.gov.uk/ID3/290184", 
     "type": "Publication", 
@@ -59,16 +66,20 @@ and reload the page.  During the reload you should now see a small dialogue pane
     "referring_url": "http://www.scotland.gov.uk/Publications/2013/11/8713/downloads", 
     "metadescription": ""
     },
+    
 ```
 so we start the layout by creating a list view.
 ```html
+
     <div data-ex-role="exhibit-viewPanel">
         <div data-ex-role="exhibit-view" data-ex-label="List"></div>
     </div>
+    
 ```
 Reload the page and examine the results.
 * Next we will make the raw printout of the data look more presentable.  In Exhibit parlance we create a 'lens'.  There can be many forms of these, here is an example:
 ```html
+
     <div data-ex-role="exhibit-lens">
         <div>
         <span>Title:-</span><span data-ex-content=".metatitle"></span>
@@ -84,26 +95,35 @@ Reload the page and examine the results.
         </div>
         <hr/>
     </div>
+    
 ```
 the 'data-ex-role' and 'data-ex-content' are Exhibit-specific html attributes that are used by the Exhibit JS API to identify data fields etc. to be used for presentation or other processing.
 * In the data the 'Keywords' is a list (in JSON this is coded by using square brackets to wrap list members).  Use the 'Keywords' list to make a word cloud using the following code:
 ```html
+
     <div data-ex-role="exhibit-facet" data-ex-expression=".keywords" data-ex-facet-class="Cloud" data-ex-label="Cloud" data-ex-show-missing="false">
+    
 ```
 Reload the page and confirm that the word cloud is at the bottom of the page.  Check that it works, i.e. select a cloud item and confirm that it selects a subset of the data.
 * Add a search function with the following code:
 ```html
+
     <div data-ex-role="exhibit-facet" data-ex-facet-label="Search" data-ex-facet-class="TextSearch"></div>
+
 ```
+
 and test that this works.
 * Now time for some facets (categories of data record).  In this case we can easily use the 'subject' and 'type' variables with the following code.
 ```html
+
     <div class="mode" data-ex-role="facet" data-ex-expression=".subject" data-ex-show-missing="true" data-ex-height="150px"></div>
     <div class="mode" data-ex-role="facet" data-ex-expression=".type" data-ex-show-missing="true" data-ex-height="150px"></div> 
+
 ```
 
 * Now let's try and improve the layout using the following rather simplistic styling:  Give the 'Cloud' div the id "cloud", the 'List' div the id "list", and the 'Search' div the id "search", and add the following style code:
 ```html
+
         <style type="text/css">
         #cloud {
         position: relative;
@@ -121,7 +141,7 @@ and test that this works.
         #search {
         width:250px;
         float:left;
-    }
+	    }
 
         div.mode {
         float: left;
@@ -131,6 +151,7 @@ and test that this works.
         width: 250px;
         }
         </style>
+
 ```
 reload the web page and see the effect.  Note that styles identified by a hash variable are applied only to the html element with that specific id.  The "div.mode" applies this style to any div element with the class "mode".
 

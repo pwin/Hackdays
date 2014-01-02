@@ -150,3 +150,11 @@ the uuid() function is used to provide an 'id'
     }
 
 ```
+
+
+http://www.unifr.ch/dokpe/paperj/exhibit.html?fp_pub=Elsevier
+
+http://www.slideshare.net/kanishka_87/simile-exhibit-vgsom-a-tutorial
+
+http://explorer.okfnlabs.org/
+

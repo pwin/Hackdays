@@ -174,6 +174,6 @@ and test that this works.
         </style>
 ```
 
-reload the web page and see the effect.  Note that styles identified by a hash variable are applied only to the html element with that specific id.  The "div.mode" applies this style to any div element with the class "mode".
+reload the web page and see the effect.  Note that styles identified by a hash variable are applied only to the html element with that specific id.  
 
 * Go to the [W3Schools site](http://www.w3schools.com/) and learn about Cascading Style Sheets and make some improvements to the styling of this faceted browser.

@@ -43,9 +43,9 @@ In your favourite text editor create the following skelton file and save it ...B
         </body>
     </html>
 
-Download and save the googlefeeds-importer.js file in the same folder.
+Download and save the googlefeeds-importer.js and __history__.html files in the same folder.
 
-Open up the html file in your browser and confirm that  it loads without any errors.
+Open up the BlueSlopeExample1.html file in your browser and confirm that  it loads without any errors.
 
 Back to the editor now, and add two RSS feeds as Exhibit data sources just below the placemarker
 
@@ -140,7 +140,7 @@ This creates the timeline for each of the RSS feed items.  You might need to adj
 The styling is very rough - try to improve it.  Use the W3Schools as a source of information about CSS styles.
 Think about creating a few different Exhibits, each one pulling in a different set of RSS feeds.  Try adjusting the granularity of the timeline.  Look at the ['Gallery'](http://www.ensemble.ac.uk/wp/archives/portfolio_category/project-gallery) of the Ensemble website and any other instances of Exhibit that you can find on the web and examine the source code to find other cool things to try out.  Above all, have fun learning.
 
-###Useful Links
+####Useful Links
 
 [Exhibit 2 Documentation for Authors](http://simile.mit.edu/wiki/Exhibit/For_Authors)
 

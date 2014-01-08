@@ -68,7 +68,7 @@ Add a list view:
 
 and reload the page.  How does it look?
 
-Later you can add a 'lens' to make this list more stylish, but before you do that add a couple of facets.  These facets will be used to sort out feeds based on the text content of each feed.  We will use a method that allows you to create a facet category and then provide a list of words or parts of words that will be used to select out matching feeds.
+Later you can add a 'lens' to make this list more organised and stylish, but before you do that add a couple of facets.  These facets will be used to sort out feeds based on the text content of each feed.  We will use a method that allows you to create a facet category and then provide a list of words or parts of words that will be used to select out matching feeds.
 
 Add the following code snippet just below the 'facets' place marker:
 

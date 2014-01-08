@@ -98,7 +98,7 @@ Note how the rssImporterConfig variables are provided and hot the text-based fac
 
 Later on try modifying this to create additional facets.  Also explore how effectively you can create non-overlapping facets by judicious choice of words or word fragments.
 
-Try adding the following textarea code to the bottom of your file, just before the closing </body> tag:
+Try adding the following textarea code to the bottom of your file, just before the closing 'body' tag:
 
 
     <textarea id="_exhibitRSSDebug_" cols="80" rows="20" wrap="off"></textarea>

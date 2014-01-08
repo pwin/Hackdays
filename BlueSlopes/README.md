@@ -1,0 +1,3 @@
+##Blue Slopes
+
+The examples in this folder are a continuation of the theme in the GreenSlopes material, they continue using [Simile Exhibit v.2](http://www.simile-widgets.org/exhibit/) but also add other javascript libraries into the mix - both from the web and also on the local file system.  The datasets used in the examples are RSS feeds and the focus is on manipulating the visualisation of these feeds so that it depends on classification criteria determined by providing a set of words or word parts, or on the timestamp of the RSS feed items.  Enjoy!

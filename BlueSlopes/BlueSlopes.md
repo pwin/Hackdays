@@ -10,7 +10,7 @@ Many organisations produce RSS data feeds, so pick one and look at it in your we
 
 In your favourite text editor create the following skelton file and save it ...BlueSlopeExample1.html.
 
-
+```html
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -42,36 +42,36 @@ In your favourite text editor create the following skelton file and save it ...B
             <!--Debug textarea-->
         </body>
     </html>
-
+```
 Download and save the googlefeeds-importer.js and __history__.html files in the same folder.
 
 Open up the BlueSlopeExample1.html file in your browser and confirm that  it loads without any errors.
 
 Back to the editor now, and add two RSS feeds as Exhibit data sources just below the placemarker
 
-
+```html
      <link 
      href="http://scottishgovernment.presscentre.com/rss/default.aspx?feedid={8d8b9894-a7c9-4afd-91f2-bcc7e2ea81f6}" 
      type="application/rss+xml" rel="exhibit/data" /> 
      <link 
      href="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx" 
      type="application/rss+xml" rel="exhibit/data" /> 
-
+```
 Save the file and again confirm that it loads without errors.
 
 Add a list view:
 
-
+```html
     <div ex:role="viewPanel">
         <div ex:role='view'></div>
     </div>
-
+```
 and reload the page.  How does it look?
 
 Later you can add a 'lens' to make this list more organised and stylish, but before you do that add a couple of facets.  These facets will be used to sort out feeds based on the text content of each feed.  We will use a method that allows you to create a facet category and then provide a list of words or parts of words that will be used to select out matching feeds.
 
 Add the following code snippet just below the 'facets' place marker:
-
+```html
     <div style="position:Absolute; top:0px; bottom:0px; right:0px; width:200px; overflow:Auto;">
     <!-- Exhibit facets, using item properties created by the RSS importer -->
     <div ex:role="facet" ex:expression=".topic" ex:facetLabel="Topic" ex:showMissing="false" ex:height="6.5em"></div>
@@ -92,7 +92,7 @@ Add the following code snippet just below the 'facets' place marker:
          </ul>
         </div>
     </div>
-
+```
 
 Note how the rssImporterConfig variables are provided and hot the text-based facets (topic and weather) are created.
 
@@ -100,18 +100,18 @@ Later on try modifying this to create additional facets.  Also explore how effec
 
 Try adding the following textarea code to the bottom of your file, just before the closing 'body' tag:
 
-
+```html
     <textarea id="_exhibitRSSDebug_" cols="80" rows="20" wrap="off"></textarea>
-
+```
 
 This allows you to see the debugging information provided by the googlefeeds-importer.js code.
 When you have finished inspecting this you can temporarily inactivate this chunk of code by placing it within html comment marks as follows:
 
-
+```html
     <!--
     <textarea id="_exhibitRSSDebug_" cols="80" rows="20" wrap="off"></textarea>
     -->
-
+```
 
 ###Timelines
 
@@ -119,7 +119,7 @@ Next we are going to add a timeline view.
 
 Under the List View place holder add the following:
 
-
+```html
     <div style="position:Absolute; top:200px; bottom:0px; right:0px; width:200px; overflow:Auto;">
     <div ex:role="view" 
       ex:viewClass="Timeline" 
@@ -132,7 +132,7 @@ Under the List View place holder add the following:
       ex:colorKey=".topic" >
     </div>
     </div>
-
+```
 This creates the timeline for each of the RSS feed items.  You might need to adjust the styling (within the opening div tag).  Note that this uses the 'topic' facet that you created earlier to colour-code the RSS links.
 
 

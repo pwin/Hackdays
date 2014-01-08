@@ -45,7 +45,7 @@ In your favourite text editor create the following skelton file and save it ...B
 ```
 Download and save the `googlefeeds-importer.js` and `__history__.html` files in the same folder.
 
-Open up the BlueSlopeExample1.html file in your browser and confirm that  it loads without any errors.
+Open up your `BlueSlopeExample1.html` file in a web browser and confirm that  it loads without any errors.
 
 Back to the editor now, and add two RSS feeds as Exhibit data sources just below the placemarker
 

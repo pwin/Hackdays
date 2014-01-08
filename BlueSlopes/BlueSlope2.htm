@@ -69,7 +69,21 @@
         <div ex:role="facet" ex:expression=".topic" ex:facetLabel="Topic" ex:showMissing="false" ex:height="6.5em"></div>
         <div ex:role="facet" ex:expression=".weather" ex:facetLabel="Weather" ex:showMissing="false" ex:height="6.5em"></div>
         </div>
-
+        <div ex:role="rssImporterConfig" ex:for="http://scottishgovernment.presscentre.com/rss/default.aspx?feedid={8d8b9894-a7c9-4afd-91f2-bcc7e2ea81f6}"
+            ex:exhibitLabel="link" ex:exhibitType="rssEdu" ex:rssSize="150" ex:historical="false" style="display:None">
+        <div ex:role="rssImporterConfig"  ex:for="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx"
+            ex:exhibitLabel="link" ex:exhibitType="rssTransport"  ex:rssSize="150" ex:historical="false" style="display:None">
+                <ul ex:create="topic" ex:search="content">
+            <li>Politics;government;parliament;msp</li>
+            <li>Innovation;computer;computers;laptop;laptops;digital;future;knowledge economy;pioneering;pioneer;innovative;transformative</li>         
+        </ul>
+         <ul ex:create="weather" ex:search="content;title">
+         <li>Storms;storm;weather</li>
+         <li>Floods;flood;river</li>
+         </ul>
+         <span ex:createDate="date" ex:using="publishedDate"></span>
+        </div>
+</div>
         <!--list view-->
         <div style="position:Absolute; top:200px; bottom:0px; right:0px; width:200px; overflow:Auto;">
         <div ex:role="view" 
@@ -91,21 +105,7 @@
                 <!--Search-->            
         <!--cloud view-->
 
-    <div ex:role="rssImporterConfig" ex:for="http://scottishgovernment.presscentre.com/rss/default.aspx?feedid={8d8b9894-a7c9-4afd-91f2-bcc7e2ea81f6}"
-        ex:exhibitLabel="link" ex:exhibitType="rssEdu" ex:rssSize="150" ex:historical="false" style="display:None">
-    <div ex:role="rssImporterConfig"  ex:for="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx"
-        ex:exhibitLabel="link" ex:exhibitType="rssTransport"  ex:rssSize="150" ex:historical="false" style="display:None">
-            <ul ex:create="topic" ex:search="content">
-            <li>Politics;government;parliament;msp</li>
-            <li>Innovation;computer;computers;laptop;laptops;digital;future;knowledge economy;pioneering;pioneer;innovative;transformative</li>         
-        </ul>
-         <ul ex:create="weather" ex:search="content;title">
-         <li>Storms;storm;weather</li>
-         <li>Floods;flood;river</li>
-         </ul>
-         <span ex:createDate="date" ex:using="publishedDate"></span>
-        </div>
-</div>
+
 
 <!--<textarea id="_exhibitRSSDebug_" cols="80" rows="20" wrap="off"></textarea>-->
         <!--data-->

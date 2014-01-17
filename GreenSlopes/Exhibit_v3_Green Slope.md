@@ -6,7 +6,7 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
 
 ####Ingredients:
 
-* Data in Exhibit JSON format:  [http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json](http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json)
+* Data in Exhibit JSON format:  [http://labs.data.scotland.gov.uk/scraping/SG/current_spreadsheets.json](http://labs.data.scotland.gov.uk/scraping/SG/current_spreadsheets.json)
 * Exhibit Version 3 JS library: [http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js](http://api.simile-widgets.org/exhibit/3.1.0rc/exhibit-api.js)
 * A text editor (e.g. Notepad) or a specialised code editor (e.g. Sublime Text, jEdit, Textmate, etc)
 * A modern web browser (Chrome, Internet Explorer >= v9, Firefox, etc)
@@ -52,7 +52,7 @@ and reload the page.  Look at the message bar of the web page and ensure that th
 
 ```html
 
-    <link href="http://labs.data.scotland.gov.uk/scraping/SG/2013-12-04_SG.json" type="application/json" rel="exhibit-data" />
+    <link href="http://labs.data.scotland.gov.uk/scraping/SG/current_spreadsheets.json" type="application/json" rel="exhibit-data" />
     
 ```
 

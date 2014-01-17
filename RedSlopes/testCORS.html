@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+  // All HTML5 Rocks properties support CORS.
+  var url1 = 'http://updates.html5rocks.com';
+  var url2 = "http://data.glasgow.gov.uk/storage/f/2013-12-11T20:53:00.557Z/codes-scot-local-authorities.csv";
+
+  var url3 = "http://schools.opendatascotland.org/tutorial/S12000040_topo.json";
+
+  var url4 = "http://labs.data.scotland.gov.uk/scraping/SG/current_spreadsheets.json"
+
+  var url5 = "http://labs.data.scotland.gov.uk/gcc/acc-glw-2005.csv";
+
+  var xhr = createCORSRequest('GET', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    alert('Response from CORS request to ' + url + ': ' + text);
+  };
+
+  xhr.onerror = function() {
+    alert('Woops, there was an error making the request.');
+  };
+
+  xhr.send();
+}
+ makeCorsRequest();
+</script>
+</body>
+</html>

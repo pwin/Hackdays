@@ -127,3 +127,10 @@ and in order to make this work completely we need to bring the ```map``` variabl
 ```javascript
     var map;
 ```
+
+####Next Steps A
+There are other providers of map tiles, e.g. Ordnance Survey.  Take a look at the [OS 'OpenSpace' examples](http://www.ordnancesurvey.co.uk/business-and-government/products/os-openspace/api/code-playground.html) and re-work the road accidents example to use this.  As the dataset includes both Lat & Long and Easting/Northing coordinates try creating maps using each apporach to location.  Note that you will have to register with Ordnance Survey to get an API key, and also you need to ensure that the projection is appropriate. [ the  UK OS projection is EPSG:27700, the OpenStreetMap default projection is WGS84 (EPSG 4326) but OpenStreetMap and Google Maps also use the Mercator projection - EPSG:3857]
+
+####Next Steps B
+Find other data sets with Longitude/Latitude or OS UK National Grid coordinates and make some more maps.  Some data sources include the SPARQL endpoints of [DBPedia](http://dbpedia.org/sparql),  [TellMeScotland]() or [SEPA](http://data.sepa.org.uk).  Try some SPARQL queries that link SEPA and DBPedia data
+

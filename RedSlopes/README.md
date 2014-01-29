@@ -12,15 +12,24 @@ Both the ability to discover about the data that the endpoint can deliver and th
 
 ####Examples of NOMIS API calls
 [http://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.xml)   => Available datasets
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography.def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography.def.sdmx.xml)  => Top level areas available
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701.def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701.def.sdmx.xml)  => Constituent geographies in Scotland
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE61.def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE61.def.sdmx.xml)  => Postcode towns in Scotland
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE63.def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE63.def.sdmx.xml)  => Postcode sectors in Scotland
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE307.def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/2092957701TYPE307.def.sdmx.xml)  => Datazones in Scotland
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_612_1/def.sdmx.xml](http://www.nomisweb.co.uk/api/v01/dataset/NM_612_1/def.sdmx.xml)  => Passports held - from E&W 2011 census
 
+
 The above return data in XML format.  One can also get data returned in CSV, JSON and other useful formats.  
+
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1.data.csv?geography=255852654&sex=5&item=1&measures=20100](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1.data.csv?geography=255852654&sex=5&item=1&measures=20100)  => JSA claimants in Glasgow (geography=255852654)
+
 
 http://www.swslim.org.uk/nomis2.html
 http://spencerhedger.com/?q=taxonomy/term/3

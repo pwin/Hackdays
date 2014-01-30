@@ -76,3 +76,4 @@ and this can be linked to the World Bank endpoint to create a complete URL suita
 
 Check this out in a browser - it returns nice JSON that you will now be familiar with.
 
+API and SPARQL endpoint data sources will be used in some of the RedSloped exercises to provide data to present graphically using a variety of drawing and mapping libraries.  They will provide you with many sources of data to extract and combine in your own work.

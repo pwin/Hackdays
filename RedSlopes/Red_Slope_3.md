@@ -47,7 +47,6 @@ Retrieving data from the NOMIS API is a simple "GET" request.  Using the jQuery 
 
 ```javascript
       $(document).ready(function() {
-        alert('here');
         $.ajax({
             type: "GET",
             url: "http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/geography/1946157420/item/1/measures/20203.data.JSON?sex=5,6,7&time=1992-01,latest",
@@ -97,3 +96,10 @@ Finally you can insert some title and other information above the chart, e.g.
     <div id="chart_title">JSA for Glasgow City [1946157420]</div>
     <div>codes for towns and cities from <a href="http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/GEOGRAPHY/2092957698TYPE464.def.sdmx.json">http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/GEOGRAPHY/2092957698TYPE464.def.sdmx.json</a></div>
 ```
+
+When you load the page the ```$(document).ready``` event is recognised and this triggers the XHR "GET" call to the NOMIS API.
+
+
+####Next Steps
+
+Take a look at other [Google visualisations](https://developers.google.com/chart/interactive/docs/gallery).  Find other datasets within NOMIS.  You caould create a dropdown list from the [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/GEOGRAPHY/2092957698TYPE464.def.sdmx.json](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1/GEOGRAPHY/2092957698TYPE464.def.sdmx.json) data and capture the ```onchange``` event to trigger the creation of another dataset and the re-drawing of the chart.  See the W3Schools page on the [onchange](http://www.w3schools.com/jsref/event_onchange.asp) event for more information.

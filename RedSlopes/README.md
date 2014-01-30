@@ -31,15 +31,35 @@ The above return data in XML format.  One can also get data returned in CSV, JSO
 [http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1.data.csv?geography=255852654&sex=5&item=1&measures=20100](http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1.data.csv?geography=255852654&sex=5&item=1&measures=20100)  => JSA claimants in Glasgow (geography=255852654)
 
 
-http://www.swslim.org.uk/nomis2.html
-http://spencerhedger.com/?q=taxonomy/term/3
+####Examples of SPARQL
 
+Go to [http://www.semantechs.co.uk/FlintSparqlEditor/sparql-editor.html](http://www.semantechs.co.uk/FlintSparqlEditor/sparql-editor.html) where you will find a SPARQL editor with some canned queries from common SPARQL endpoints.
 
+SPARQL is somewhat similar to the database query language SQL.  You can find out more about SPARQL using the UK DCLG dataset at [http://blog.swirrl.com/articles/sparql-example-find-data-for-postcode/](http://blog.swirrl.com/articles/sparql-example-find-data-for-postcode/)
 
+SPARQL can also be used to combine data from multiple SPARQL endpoints (providedthat they are configured for federated query).  Here's a SPARQL illustration of merging data from two sources
+Enter the following into the search pane into a SPARQL endpoint (one that is set up to allow SPARQL 1.1 federated searches - try the SEPA or the World Bank endpoint).  It selects landlocked countries from DBPedia and the looks in the World Bank dataset for some of their data with the same DBPedia country identifiers. 
 
+```
+    #find the landlocked countries 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+    PREFIX dct: <http://purl.org/dc/terms/> 
+    PREFIX type: <http://dbpedia.org/class/yago/> 
+    PREFIX prop: <http://dbpedia.org/property/> 
+    SELECT ?country ?country_name ?capital ?population ?p ?x ?q ?w 
+    WHERE { 
+    service <http://dbpedia.org/sparql/sparql> 
+     { ?country a type:LandlockedCountries ; 
+           rdfs:label ?country_name ; 
+           prop:populationEstimate ?population ; 
+           prop:capital ?capital . 
+       FILTER ( lang(?country_name) = 'en' )
+     }
+     SERVICE <http://worldbank.270a.info/sparql>
+     {optional {?p ?x ?country.
+             ?p ?q ?w . }}
+     }
+     limit 10
+ ```
 
-http://www.nomisweb.co.uk/api/v01/dataset/NM_1_1.data.csv?geography=2038432081&sex=5&item=1&measures=20100
-
-
-http://www.nomisweb.co.uk/api/v01/dataset/nm_1_1/geography/2038432081/sex/7/item/1/measures/20203.data.json?time=2009-01,latest
-
+The Flint Editor is a pretty way to explore a SPARQL endpoint, but in an application one needs to submit the query to the endpoint as an XHR "GET" request.  To do this we need to first ensure that the query is encoded to replace spaces and other characters by their hex equivalents.  you can do this using a site such as [http://www.url-encode-decode.com/](http://www.url-encode-decode.com/)

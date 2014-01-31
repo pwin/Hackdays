@@ -12,6 +12,7 @@ Start off with Leaflet.  Create the following HTML file, save it and look at it 
     <title>Leaflet Example</title>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js?2"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script type='text/javascript'>
 
     function init()

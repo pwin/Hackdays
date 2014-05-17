@@ -8,11 +8,14 @@
 function createCORSRequest(method, url) {
   var xhr = new XMLHttpRequest();
   if ("withCredentials" in xhr) {
+    alert("with Credentials");
     // XHR for Chrome/Firefox/Opera/Safari.
     xhr.open(method, url, true);
+    xhr.setRequestHeader("Accept", "text/csv");
   } else if (typeof XDomainRequest != "undefined") {
     // XDomainRequest for IE.
     xhr = new XDomainRequest();
+    alert("Domain request");
     xhr.open(method, url);
   } else {
     // CORS not supported.
@@ -33,7 +36,11 @@ function makeCorsRequest() {
 
   var url5 = "http://labs.data.scotland.gov.uk/gcc/acc-glw-2005.csv";
 
-  var xhr = createCORSRequest('GET', url);
+  var url6 = "https://api.github.com/repos/pwin/Hackdays/contents/Data/acc-glw-2012.csv?ref=master";
+
+  var url7 = "https://github.com/pwin/Hackdays/raw/master/Data/acc-glw-2012.csv";
+
+  var xhr = createCORSRequest('GET', url5);
   if (!xhr) {
     alert('CORS not supported');
     return;
@@ -42,6 +49,8 @@ function makeCorsRequest() {
   // Response handlers.
   xhr.onload = function() {
     var text = xhr.responseText;
+    alert('just loading');
+    document.getElementById('d').innerHTML = text;
     alert('Response from CORS request to ' + url + ': ' + text);
   };
 
@@ -53,5 +62,6 @@ function makeCorsRequest() {
 }
  makeCorsRequest();
 </script>
+<div id='d'>Hey</div>
 </body>
 </html>

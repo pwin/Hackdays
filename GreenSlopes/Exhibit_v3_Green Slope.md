@@ -178,3 +178,9 @@ and test that this works.
 reload the web page and see the effect.  Note that styles identified by a hash variable are applied only to the html element with that specific id.  
 
 * Go to the [W3Schools site](http://www.w3schools.com/) and learn about Cascading Style Sheets and make some improvements to the styling of this faceted browser.
+* you might need to ensure that the browser supports CORS.  Add he following code in after the styles in the head area:
+```
+<script>
+$.support.cors = true;
+</script>
+```

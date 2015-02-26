@@ -143,6 +143,7 @@ and test that this works.
         float: left;
         vertical-align: top;
         width: 300px;
+        }
 
         #list {
         width: 700px;

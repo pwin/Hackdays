@@ -1,6 +1,6 @@
 ##Blue Slopes
 
-In this Blue Slope run we will extend what we learned with the Exhibit version 2 work on the Green Slope and see how we can work with RSS feeds to give faceted browsing based on text matches and to give timelines.
+In this Blue Slope run we will extend what we learned with the Exhibit version 2 work on the Green Slope and see how we can work with RSS feeds to give faceted browsing based on text matches.
 
 For background on RSS data feeds check out the [Wikipedia article](http://en.wikipedia.org/wiki/RSS).  These are XML feeds.  There is a [Google API service](https://www.google.com/jsapi) that converts these XML feeds to JSON, and then to get we need to do a little modification of this JSON structure to make it work correctly with Exhibit.  The googlefeeds-importer.js (from the recently disbanded [Ensemble Project](https://ensembleljmu.wordpress.com/)) does this modification.
 
@@ -17,7 +17,6 @@ In your favourite text editor create the following skelton file and save it ...B
             <title>My Blue Slope Example 1</title>
             <!--Exhibit JS and other libraries-->
             <script type="text/javascript" src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"></script>
-            <script type="text/javascript" src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/time/time-extension.js" ></script>
             <script type="text/javascript" src="https://www.google.com/jsapi"></script>
             <script type="text/javascript" src="googlefeeds-importer.js"></script>
             <!--data-->
@@ -88,7 +87,7 @@ Add the following code snippet just below the 'facets' place marker:
          <ul ex:create="weather" ex:search="content;title">
          <li>Storms;storm;weather</li>
          <li>Floods;flood;river</li>
-         <li>RoadWorks;work;</li>
+         <li>RoadWorks;work;road</li>
          </ul>
         </div>
     </div>
@@ -113,32 +112,11 @@ When you have finished inspecting this you can temporarily inactivate this chunk
     -->
 ```
 
-###Timelines
-
-Next we are going to add a timeline view.
-
-Under the List View place holder add the following:
-
-```html
-    <div style="position:Absolute; top:200px; bottom:0px; right:0px; width:200px; overflow:Auto;">
-    <div ex:role="view" 
-      ex:viewClass="Timeline" 
-      ex:start=".date"
-      ex:marker=".title"
-      ex:bottomBandPixelsPerUnit="35"
-      ex:topBandPixelsPerUnit="55"
-      ex:timelineHeight="380"
-      ex:topBandUnit="day"
-      ex:colorKey=".topic" >
-    </div>
-    </div>
-```
-This creates the timeline for each of the RSS feed items.  You might need to adjust the styling (within the opening div tag).  Note that this uses the 'topic' facet that you created earlier to colour-code the RSS links.
 
 
 ###Next Steps
 The styling is very rough - try to improve it.  Use the W3Schools as a source of information about CSS styles.
-Think about creating a few different Exhibits, each one pulling in a different set of RSS feeds.  Try adjusting the granularity of the timeline.  Look at the instances of Exhibit that you can find on the web, including those linked below, and examine the source code to find other cool things to try out.  Above all, have fun learning.
+Think about creating a few different Exhibits, each one pulling in a different set of RSS feeds.  Look at the instances of Exhibit that you can find on the web, including those linked below, and examine the source code to find other cool things to try out.  Above all, have fun learning.
 
 ####Useful Links
 

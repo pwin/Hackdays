@@ -43,7 +43,7 @@ In your favourite text editor create the following skelton file and save it ...B
         </body>
     </html>
 ```
-Download and save the `googlefeeds-importer.js` and `__history__.html` files in the same folder.
+Download and save the [googlefeeds-importer.js](https://raw.githubusercontent.com/pwin/Hackdays/master/BlueSlopes/googlefeeds-importer.js) and [__history__.html](https://raw.githubusercontent.com/pwin/Hackdays/master/BlueSlopes/__history__.html) files in the same folder.
 
 Open up your `BlueSlopeExample1.html` file in a web browser and confirm that  it loads without any errors.
 

@@ -2,7 +2,7 @@
 
 In the above example the polygons representing the boundaries of local authority areas are simple join-the-dots polygons.  In this next Red Slope real map data will be introduced and will be used as the substrate on which to represent data that includes geographic reference co-ordinates of latitude and longitude.  There are several sources of map tiles including Ordnance Survey, Open Street Map, Google and Bing (Microsoft) and also numerous ArcGIS servers.
 
-One javascript library that makes working with map tiles reasonably straightforeward is [Leaflet](http://leafletjs.com/).  Another is [OpenLayers](http://openlayers.org/) - see also the [OpenLayers v3](http://ol3js.org/) site.
+One javascript library that makes working with map tiles reasonably straightforward is [Leaflet](http://leafletjs.com/).  Another is [OpenLayers](http://openlayers.org/) - see also the [OpenLayers v3](http://ol3js.org/) site.
 
 Start off with Leaflet.  Create the following HTML file, save it and look at it in your browser.
 

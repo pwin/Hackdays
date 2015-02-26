@@ -6,7 +6,7 @@ One approach to prevent this is for you to only pick small datasets - and there 
 
 In this Red Slope we will look at how to work with two styles of subsetting method: the Application Programming Interface (API) and the SPARQL (RDF query language) endpoint.
 
-First off, the API:  Take a look at the [NOMIS API]http://www.nomisweb.co.uk/api/v01/help).  The API uses URLs that contain parameters(variables) which the API uses to select the data that you are wanting.  There tends to be a fixed order and format for these paramers and there generally isn't a way (other than reading the documentation) to find out what the API can deliver.  Moreover, there is no standard for APIs.  
+First off, the API:  Take a look at the [NOMIS API](http://www.nomisweb.co.uk/api/v01/help).  The API uses URLs that contain parameters(variables) which the API uses to select the data that you are wanting.  There tends to be a fixed order and format for these paramers and there generally isn't a way (other than reading the documentation) to find out what the API can deliver.  Moreover, there is no standard for APIs.  
 
 Both the ability to discover about the data that the endpoint can deliver and the standardisation of the endpoint are ways in which SPARQL endpoints are improvements on the API.  However, to counterbalance this flexibility of the SPARQL approach, APIs tend to be easier for the novice to deal with.
 

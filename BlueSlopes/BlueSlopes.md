@@ -2,7 +2,7 @@
 
 In this Blue Slope run we will extend what we learned with the Exhibit version 2 work on the Green Slope and see how we can work with RSS feeds to give faceted browsing based on text matches and to give timelines.
 
-For background on RSS data feeds check out the [Wikipedia article](http://en.wikipedia.org/wiki/RSS).  These are XML feeds.  There is a [Google API service](https://www.google.com/jsapi) that converts these XML feeds to JSON, and then to get we need to do a little modification of this JSON structure to make it work correctly with Exhibit.  The googlefeeds-importer.js (from the [Ensemble Project](http://www.ensemble.ac.uk/)) does this modification.
+For background on RSS data feeds check out the [Wikipedia article](http://en.wikipedia.org/wiki/RSS).  These are XML feeds.  There is a [Google API service](https://www.google.com/jsapi) that converts these XML feeds to JSON, and then to get we need to do a little modification of this JSON structure to make it work correctly with Exhibit.  The googlefeeds-importer.js (from the recently disbanded [Ensemble Project](https://ensembleljmu.wordpress.com/)) does this modification.
 
 Many organisations produce RSS data feeds, so pick one and look at it in your web browser.  Your browser will probably create a simple visualisation of the data, so view the source code in the usual way (right-click etc) to take a peek at the underlying XML.
 
@@ -138,7 +138,7 @@ This creates the timeline for each of the RSS feed items.  You might need to adj
 
 ###Next Steps
 The styling is very rough - try to improve it.  Use the W3Schools as a source of information about CSS styles.
-Think about creating a few different Exhibits, each one pulling in a different set of RSS feeds.  Try adjusting the granularity of the timeline.  Look at the ['Gallery'](http://www.ensemble.ac.uk/wp/archives/portfolio_category/project-gallery) of the Ensemble website and any other instances of Exhibit that you can find on the web and examine the source code to find other cool things to try out.  Above all, have fun learning.
+Think about creating a few different Exhibits, each one pulling in a different set of RSS feeds.  Try adjusting the granularity of the timeline.  Look at the instances of Exhibit that you can find on the web, including those linked below, and examine the source code to find other cool things to try out.  Above all, have fun learning.
 
 ####Useful Links
 

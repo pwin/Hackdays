@@ -18,7 +18,7 @@ Now, construct a basic HTML page with the Google API, jQuery and JSON3 libraries
     <title>Timeline Example</title>
 
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="http://www.x-non.com/json/json3.min.js"></script>
     <script type="text/javascript"> 
     //Put your script here

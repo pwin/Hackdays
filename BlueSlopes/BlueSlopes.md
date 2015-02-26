@@ -94,7 +94,7 @@ Add the following code snippet just below the 'facets' place marker:
     </div>
 ```
 
-Note how the rssImporterConfig variables are provided and hot the text-based facets (topic and weather) are created.
+Note how the rssImporterConfig variables are provided and how the text-based facets (topic and weather) are created.
 
 Later on try modifying this to create additional facets.  Also explore how effectively you can create non-overlapping facets by judicious choice of words or word fragments.
 

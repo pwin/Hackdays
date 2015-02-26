@@ -45,6 +45,8 @@ Note that the view is initially set to a latitude and longitude and a zoom level
 ```
 So one easy experiment to start with is to change these values and refresh your browser to see how the view changes. Use [this site](http://www.informationfreeway.org/) to find latitude and longitude data (bottom left).
 
+The initialisation of the map up to this point has been triggered by the onload event capture that is in the body tag:  ` <body onload="init()">` .  Delete ` onload="init()"` at this point because we will capture the `document ready` event in a function to trigger the loading of data into our application.
+
 Next to import some data.   [http://labs.data.scotland.gov.uk/gcc/index.php](http://labs.data.scotland.gov.uk/gcc/index.php) has some data on road accidents collected as the STATS19 dataset and taken from the [Glasgow Future Cities data repository](http://data.glasgow.gov.uk) from which you can find more information.  The data includes Long and Lat data.  These csv files are hosted on a CORS-enabled web server and so are accessible using native XMLHttpRequest or XDomainRequest calls.  See the [testCORS.html](https://github.com/pwin/Hackdays/blob/master/RedSlopes/testCORS.html) file for illustrations.
 
 

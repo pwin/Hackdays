@@ -112,7 +112,7 @@ the 'data-ex-role' and 'data-ex-content' are Exhibit-specific html attributes th
 * In the data the 'Keywords' is a list (in JSON this is coded by using square brackets to wrap list members).  Use the 'Keywords' list to make a word cloud using the following code:
 ```html
 
-    <div data-ex-role="exhibit-facet" data-ex-expression=".keywords" data-ex-facet-class="Cloud" data-ex-label="Cloud" data-ex-show-missing="false">
+    <div id="cloud" data-ex-role="exhibit-facet" data-ex-expression=".keywords" data-ex-facet-class="Cloud" data-ex-label="Cloud" data-ex-show-missing="false">
 ```
 
 Reload the page and confirm that the word cloud is at the bottom of the page.  Check that it works, i.e. select a cloud item and confirm that it selects a subset of the data.
@@ -120,7 +120,7 @@ Reload the page and confirm that the word cloud is at the bottom of the page.  C
 * Add a search function with the following code:
 ```html
 
-    <div data-ex-role="exhibit-facet" data-ex-facet-label="Search" data-ex-facet-class="TextSearch"></div>
+    <div id="search" data-ex-role="exhibit-facet" data-ex-facet-label="Search" data-ex-facet-class="TextSearch"></div>
 ```
 
 and test that this works.

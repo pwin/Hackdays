@@ -80,7 +80,7 @@ and reload the page.  During the reload you should now see a small dialogue pane
 so we start the layout by creating a list view.
 ```html
 
-    <div data-ex-role="exhibit-viewPanel">
+    <div id="list" data-ex-role="exhibit-viewPanel">
         <div data-ex-role="exhibit-view" data-ex-label="List"></div>
     </div>
     

@@ -16,9 +16,11 @@ In your favourite text editor create the following skelton file and save it ...B
         <head>
             <title>My Blue Slope Example 1</title>
             <!--Exhibit JS and other libraries-->
+            <!-- see https://rss2json.com/google-feed-api-alternative for replacement for Google Feed API -->
             <script type="text/javascript" src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"></script>
             <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-            <script type="text/javascript" src="googlefeeds-importer.js"></script>
+	        <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
+            <script type="text/javascript" src="http://labs.data.scotland.gov.uk/js/googlefeeds-importer.js"></script>
             <!--data-->
             <!--styles-->
              <link rel='stylesheet' href='http://www.simile-widgets.org/styles/common.css' type='text/css' />            
@@ -42,19 +44,15 @@ In your favourite text editor create the following skelton file and save it ...B
         </body>
     </html>
 ```
-Download and save the [`googlefeeds-importer.js`](https://raw.githubusercontent.com/pwin/Hackdays/master/BlueSlopes/googlefeeds-importer.js) and [`__history__.html`](https://raw.githubusercontent.com/pwin/Hackdays/master/BlueSlopes/__history__.html) files in the same folder.
+Download and save the [`__history__.html`](https://raw.githubusercontent.com/pwin/Hackdays/master/BlueSlopes/__history__.html) file in the same folder.
 
 Open up your `BlueSlopeExample1.html` file in a web browser and confirm that  it loads without any errors.
 
 Back to the editor now, and add two RSS feeds as Exhibit data sources just below the placemarker
 
 ```html
-     <link 
-     href="http://scottishgovernment.presscentre.com/rss/default.aspx?feedid={8d8b9894-a7c9-4afd-91f2-bcc7e2ea81f6}" 
-     type="application/rss+xml" rel="exhibit/data" /> 
-     <link 
-     href="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx" 
-     type="application/rss+xml" rel="exhibit/data" /> 
+     <link href="http://news.gov.scot/feed/rss" type="application/rss+xml" rel="exhibit/data" /> 
+     <link href="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx" type="application/rss+xml" rel="exhibit/data" /> 
 ```
 Save the file and again confirm that it loads without errors.
 
@@ -76,7 +74,7 @@ Add the following code snippet just below the 'facets' place marker:
     <div ex:role="facet" ex:expression=".topic" ex:facetLabel="Topic" ex:showMissing="false" ex:height="6.5em"></div>
     <div ex:role="facet" ex:expression=".weather" ex:facetLabel="Weather" ex:showMissing="false" ex:height="6.5em"></div>
     </div>
-    <div ex:role="rssImporterConfig" ex:for="http://scottishgovernment.presscentre.com/rss/default.aspx?feedid={8d8b9894-a7c9-4afd-91f2-bcc7e2ea81f6}"
+    <div ex:role="rssImporterConfig" ex:for="http://news.gov.scot/feed/rss"
     ex:exhibitLabel="link" ex:exhibitType="rssScotGov" ex:rssSize="150" ex:historical="false" style="display:None">
     <div ex:role="rssImporterConfig"  ex:for="http://www.trafficscotland.org/rss/feeds/currentincidents.aspx"
     ex:exhibitLabel="link" ex:exhibitType="rssTransScot"  ex:rssSize="150" ex:historical="false" style="display:None">

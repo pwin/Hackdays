@@ -26,9 +26,9 @@ qb:observation ?obs .
 ?b rdfs:label ?buildingName . 
 
 ?obs gol:utilityConsumption ?o ;
-gol:refUtility util:electricity .
+8gol:refUtility util:electricity .
  
-filter (xsd:dateTime(?dt) >= '2014-01-10T00:00:00Z'^^xsd:dateTime &&
+filter (xsd:dateTime(?dt) >= '2018-01-10T00:00:00Z'^^xsd:dateTime &&
 xsd:dateTime(?dt) < afn:now())
 }
 group by ?buildingName ?dt
@@ -48,7 +48,7 @@ Read through the following code and use it in a web page
 ```javascript
 var data; // a global
 
-var url3 = "http://cofog01.data.scotland.gov.uk/spared/endpoint.php?query=prefix%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0Aprefix%20gol%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fdef%2Fgolspie%2F%3E%0Aprefix%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0Aprefix%20buildingCode%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fid%2Ffacility%2F%3E%0Aprefix%20fn%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2005%2Fxpath-functions%23%3E%0Aprefix%20util%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fdef%2Fgolspie%2F%3E%0Aprefix%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20afn%3A%20%3Chttp%3A%2F%2Fjena.hpl.hp.com%2FARQ%2Ffunction%23%3E%0Aprefix%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%20%0Aselect%20%3FbuildingName%20%3Fdt%20(max(%3Fo)%20as%20%3Fval%20)%20%0A%20%0Awhere%20%7B%0A%20%0A%3Fslice%20gol%3ArefBuilding%20%3Fb%20%3B%0Agol%3AreportDateTime%20%3Fdt%20%3B%0Aqb%3AsliceStructure%20gol%3AsliceByDay%3B%0Aqb%3Aobservation%20%3Fobs%20.%0A%0A%3Fb%20rdfs%3Alabel%20%3FbuildingName%20.%20%0A%3Fobs%20gol%3AutilityConsumption%20%3Fo%20%3B%0Agol%3ArefUtility%20util%3Aelectricity%20.%0A%20%0Afilter%20(xsd%3AdateTime(%3Fdt)%20%3E%3D%20%272014-01-10T00%3A00%3A00Z%27%5E%5Exsd%3AdateTime%20%26%26%0Axsd%3AdateTime(%3Fdt)%20%3C%20afn%3Anow())%0A%7D%0Agroup%20by%20%3FbuildingName%20%3Fdt%0Aorder%20by%20%3Fdt%0A%20%0Alimit%2020000%20";
+var url3 = "http://cofog01.data.scotland.gov.uk/spared/endpoint.php?query=prefix%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0Aprefix%20gol%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fdef%2Fgolspie%2F%3E%0Aprefix%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0Aprefix%20buildingCode%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fid%2Ffacility%2F%3E%0Aprefix%20fn%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2005%2Fxpath-functions%23%3E%0Aprefix%20util%3A%20%3Chttp%3A%2F%2Fcofog01.data.scotland.gov.uk%2Fdef%2Fgolspie%2F%3E%0Aprefix%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20afn%3A%20%3Chttp%3A%2F%2Fjena.hpl.hp.com%2FARQ%2Ffunction%23%3E%0Aprefix%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%20%0Aselect%20%3FbuildingName%20%3Fdt%20(max(%3Fo)%20as%20%3Fval%20)%20%0A%20%0Awhere%20%7B%0A%20%0A%3Fslice%20gol%3ArefBuilding%20%3Fb%20%3B%0Agol%3AreportDateTime%20%3Fdt%20%3B%0Aqb%3AsliceStructure%20gol%3AsliceByDay%3B%0Aqb%3Aobservation%20%3Fobs%20.%0A%0A%3Fb%20rdfs%3Alabel%20%3FbuildingName%20.%20%0A%3Fobs%20gol%3AutilityConsumption%20%3Fo%20%3B%0Agol%3ArefUtility%20util%3Aelectricity%20.%0A%20%0Afilter%20(xsd%3AdateTime(%3Fdt)%20%3E%3D%20%272018-01-10T00%3A00%3A00Z%27%5E%5Exsd%3AdateTime%20%26%26%0Axsd%3AdateTime(%3Fdt)%20%3C%20afn%3Anow())%0A%7D%0Agroup%20by%20%3FbuildingName%20%3Fdt%0Aorder%20by%20%3Fdt%0A%20%0Alimit%2020000%20";
 
 d3.json(url3, function(error, json) {
   if (error) return console.warn(error);
@@ -169,7 +169,7 @@ function plot(data) {
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.0/json3.min.js"></script>
-    <script type="text/javascript" src="http://documentcloud.github.io/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="http://bl.ocks.org/mbostock/raw/4061961/3b1a3d3505d4a4d87555e12d9f223834bb6c7c09/bullet.js"></script>
 
     <script>

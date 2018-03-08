@@ -21,6 +21,7 @@ Make something similar to [http://labs.data.scotland.gov.uk/scraping/SG/index.ht
     <html lang="en">
         <head>
             <title>My Green Slope Example</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
             <!--Exhibit JS library-->
             <!--data-->
             <!--styles-->

@@ -15,6 +15,7 @@ In your favourite text editor create the following skelton file and save it ...B
     <html lang="en">
         <head>
             <title>My Blue Slope Example 1</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
             <!--Exhibit JS and other libraries-->
             <!-- see https://rss2json.com/google-feed-api-alternative for replacement for Google Feed API -->
             <script type="text/javascript" src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"></script>

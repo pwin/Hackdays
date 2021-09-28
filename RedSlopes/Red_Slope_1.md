@@ -9,7 +9,7 @@ General resources:
 
 DEMO
 
-1:  Go to http://yasgui.org
+1:  Go to http://yasgui.triply.cc/
 
 2:  Paste http://statistics.gov.scot/sparql into the endpoint box
 

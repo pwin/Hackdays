@@ -47,14 +47,7 @@ select distinct ?g
 limit 200
 ```
 
-6:  How many graphs are there?  SPARQL uses many of the XPath functions, such as count().  However, unlike SQL, once we apply a function to a variable we need to also bind the result to a new variable.
 
-```
-select (count(distinct ?g) as ?numberOfGraphs)
-{graph ?g
-{?s ?p ?o }
-}
-```
 
 6a:  What Classes of "thing" are there?
 
@@ -78,6 +71,14 @@ select distinct ?s
 }
 ```
 
+6:  How many graphs are there that contain class definitions?  SPARQL uses many of the XPath functions, such as count().  However, unlike SQL, once we apply a function to a variable we need to also bind the result to a new variable.  Note that sometimes queries like this can take a long time to run, and in the case of dbpedia there is a 'timeout' argument variable that takes an integer, the number of milliseconds, as a value.  Clicking on the cogwheel icon on the left side of the Yasgui interface allows us to set that variable to a different value to the default (30000 msec) in case the query doesn't have enough time to run using the default settings.
+
+```
+select (count(distinct ?g) as ?numberOfGraphs)
+{graph ?g
+{?s a ?o }
+}
+```
 
 
 7:  Having spotted what looks like an interesting graph earlier, (just from the URI) let's rummage around
